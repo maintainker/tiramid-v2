@@ -27,7 +27,7 @@ body{
   height: 100vh;
   position: relative;
   transition: all .5s ease;
-  background: #dcdcdc;
+  /* background: #dcdcdc; */
   /* 스크롤바 제거 */
   &::-webkit-scrollbar {
     display: none;
