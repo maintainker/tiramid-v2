@@ -5,6 +5,7 @@ import { ColorList } from "../../../shared";
 const navMap = {
   default: "/",
   log: "/log",
+  point: "/point",
   info: "/info",
   album: "/album",
 };
@@ -19,8 +20,13 @@ function HeaderNav() {
       >
         <Link to={navMap["default"]}>입력</Link>
       </li>
+      <li
+        className={`${location.pathname === navMap["point"] ? "active" : ""}`}
+      >
+        <Link to="/point">포인트</Link>
+      </li>
       <li className={`${location.pathname === navMap["log"] ? "active" : ""}`}>
-        <Link to="/log">log</Link>
+        <Link to="/log">로그</Link>
       </li>
       <li className={`${location.pathname === navMap["info"] ? "active" : ""}`}>
         <Link to="/info">정보</Link>
@@ -28,7 +34,7 @@ function HeaderNav() {
       <li
         className={`${location.pathname === navMap["album"] ? "active" : ""}`}
       >
-        <Link to="/album">album</Link>
+        <Link to="/album">앨범</Link>
       </li>
     </HeaderList>
   );
