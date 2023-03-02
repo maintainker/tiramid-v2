@@ -53,7 +53,6 @@ function Log() {
           <option value="10">10</option>
           <option value="11">11</option>
           <option value="12">12</option>
-          <option value="total">전체</option>
         </select>
       </div>
       <ul className="log-container">
