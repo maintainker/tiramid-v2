@@ -3,25 +3,13 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { ColorList } from "../../shared";
 import {
-  getFirestore,
   collection,
-  addDoc,
   getDocs,
   doc,
-  updateDoc,
   query,
   where,
 } from "firebase/firestore/lite";
-// import {
-//   // collection,
-//   // getDoc,
-//   // doc,
-//   query,
-//   getDocs,
-// } from "firebase/firestore/lite";
 import { firedb } from "../../fbase";
-import { log2023 } from "../../tmp/log";
-import { player2023 } from "../../tmp/player";
 interface LogType {
   loser1_point: number;
   loser2: {
@@ -48,8 +36,6 @@ interface LogType {
   winner2_point: number;
   id: string;
 }
-// type LogDatas =
-// import { collection } from "firebase/fires/tore";
 const totalYears = (() => {
   const thisYear = dayjs().year();
   const years = [];
