@@ -24,7 +24,7 @@ declare interface LogType {
   winner2_point: number;
   id: string;
 }
-declare interface playerType {
+declare interface PlayerType {
   name: string;
   lose: number;
   win: number;

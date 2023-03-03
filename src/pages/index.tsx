@@ -86,11 +86,11 @@ function Home() {
     // const
     try {
       const innerPlayers = (await Promise.allSettled([
-        (await getDoc(win1Doc)).data() as playerType,
-        (await getDoc(win2Doc)).data() as playerType,
-        (await getDoc(lose1Doc)).data() as playerType,
-        (await getDoc(lose2Doc)).data() as playerType,
-      ])) as { status: string; value: playerType }[];
+        (await getDoc(win1Doc)).data() as PlayerType,
+        (await getDoc(win2Doc)).data() as PlayerType,
+        (await getDoc(lose1Doc)).data() as PlayerType,
+        (await getDoc(lose2Doc)).data() as PlayerType,
+      ])) as { status: string; value: PlayerType }[];
       innerPlayers[0].value.win++;
       innerPlayers[1].value.win++;
       innerPlayers[2].value.lose++;
